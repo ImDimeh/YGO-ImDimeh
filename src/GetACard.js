@@ -20,6 +20,7 @@ const GetSimpleCardDataByName = async (name) => {
     const data = await response.json();
     // Supposons que data.data[0] contient les informations de la carte
     const card = data.data[0];
+    console.log(`https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${name}`);
 
     // Filtrer et reformater la réponse pour ne renvoyer que les données spécifiées
     const filteredData = {
