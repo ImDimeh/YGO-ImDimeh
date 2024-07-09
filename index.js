@@ -4,21 +4,21 @@ import IsMyCardBan from "./src/isMyCardBan.js";
 import GetAllCardByArchetype from "./src/GetAllCardByArchetype.js"
 import searchCard from './src/GetCardByData.js'
 
-searchCard({
-  type: "Monster",
-  level: 8,
+// searchCard({
+//   type: "Monster",
+//   level: 8,
 
-  archetype: "Blue-Eyes",
-  race: "dragon",
-  num : 5
-})
-  .then((data) => console.log(data))
-  .catch((error) => console.log(error));
-
-
-// GetSimpleCardDataByName("Raidraptor - Rising Rebellion Falcon")
+//   archetype: "Blue-Eyes",
+//   race: "dragon",
+//   num : 5
+// })
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
+
+
+GetSimpleCardDataByName("Raidraptor - Rising Rebellion Falcon")
+  .then((data) => console.log(data))
+  .catch((error) => console.log(error));
 
 
 // GetBanCarbByRegion("azeaze")
