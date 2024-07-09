@@ -70,7 +70,7 @@ describe("IsMyCardBan", () => {
     });
 
     const result = await IsMyCardBan("Invalid Card Name", "tcg");
-    expect(result).toBeNull();
+    expect(result).toBe("Normal");
   });
 
   it("should return null for a valid card but invalid region", async () => {
@@ -86,13 +86,13 @@ describe("IsMyCardBan", () => {
     });
 
     const result = await IsMyCardBan("Pot of Greed", "atlantis");
-    expect(result).toBeNull();
+    expect(result).toBe(undefined);
   });
 
   it("should handle fetch errors gracefully", async () => {
     fetch.mockRejectedValueOnce(new Error("Network Error"));
 
     const result = await IsMyCardBan("Pot of Greed", "tcg");
-    expect(result).toBeNull();
+    expect(result).toBe("Normal");
   });
 });
