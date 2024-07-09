@@ -37,7 +37,7 @@ const GetSimpleCardDataByName = async (name) => {
     };
     return filteredData;
   } catch (error) {
-    console.error("Failed to fetch card data:", error);
+    console.log("Failed to fetch card data:", error);
     return null; // Retourner null ou une valeur par défaut en cas d'erreur
   }
 };
